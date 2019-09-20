@@ -1,0 +1,6 @@
+C:\Users\laksh\Downloads\GitHub\Angular-and-WEBAPI\Webapi\ProductAPI\ProductAPI.core\bin\Debug\ProductAPI.core.dll
+C:\Users\laksh\Downloads\GitHub\Angular-and-WEBAPI\Webapi\ProductAPI\ProductAPI.core\bin\Debug\ProductAPI.core.pdb
+C:\Users\laksh\Downloads\GitHub\Angular-and-WEBAPI\Webapi\ProductAPI\ProductAPI.core\obj\Debug\ProductAPI.core.csproj.CoreCompileInputs.cache
+C:\Users\laksh\Downloads\GitHub\Angular-and-WEBAPI\Webapi\ProductAPI\ProductAPI.core\obj\Debug\ProductAPI.core.dll
+C:\Users\laksh\Downloads\GitHub\Angular-and-WEBAPI\Webapi\ProductAPI\ProductAPI.core\obj\Debug\ProductAPI.core.pdb
+C:\Users\laksh\Downloads\GitHub\Angular-and-WEBAPI\Webapi\ProductAPI\ProductAPI.core\obj\Debug\ProductAPI.core.csprojAssemblyReference.cache

@@ -1,0 +1,48 @@
+<div class="notification">
+    <div class="field has-addons">
+        <div class="control">
+            <a class="button is-info">
+              Filter
+            </a>
+          </div>
+        <div class="control">
+          <input class="input" type="text" placeholder="Find any value" [(ngModel)]='searchtext' >
+        </div>
+      </div>
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" *ngIf='products && products.length'>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Color</th>
+            <th>Instock</th>
+            <th>Quantity</th>
+            <th>Details</th>
+            <th>Rating</th>
+            <th>ExpiryDate</th>
+            <th>Image</th>
+            <th colspan="2" class="has-text-centered">Options</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products | productfilter:searchtext ">
+            <td>{{p.ProductID}}</td>
+            <td>{{p.Title}}</td>
+            <td>{{p.Price}}</td>
+            <td>{{p.Color}}</td>
+            <td> <span class="icon has-text-success">
+                    <i *ngIf='p.inStock' class="fas fa-check-circle"></i>
+                    <i *ngIf='!p.inStock' class="far fa-circle"></i>
+                  </span>
+            </td>
+            <td>{{p.Quantity}}</td>
+            <td>{{p.Details}}</td>
+            <td>{{p.Rating}}</td>
+            <td>{{p.ExpiryDate | date: 'MM/dd/yyyy'}}</td>
+            <td><img width="96" height="128" [src]="p.ImageUrl"/></td>
+            <td><a (click)='editproduct(p.ProductID)' class="button is-info"><i class="fas fa-edit"></i>EDIT</a></td>
+            <td><a (click)='DeleteProd(p.ProductID)' class="button is-danger"><i class="fas fa-trash"></i>DELETE</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

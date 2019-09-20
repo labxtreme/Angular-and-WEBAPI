@@ -1,0 +1,61 @@
+<div class="notification">
+        <form [formGroup]='addprocedureform' (ngSubmit)="ADDProduct(addprocedureform.value)" novalidate>
+            
+            
+                        <label class="label">ID</label>
+                        <input class="input" type="number" formControlName='ProductId' required> 
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('ProductId').hasError('required') && addprocedureform.get('ProductId').touched">
+                                ID is Required
+                              </div>
+                        <label class="label">Name</label>
+                        <input class="input" type="text" formControlName='Title' required>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('Title').hasError('required') && addprocedureform.get('Title').touched">
+                                Name is Required
+                              </div>
+                        <label class="label">Price</label>
+                        <input class="input" type="number" formControlName='Price' required>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('Price').hasError('required') && addprocedureform.get('Price').touched">
+                                Price is Required
+                              </div>
+                        <label class="label">Color</label>
+                        <input class="input" type="text" formControlName='Color' required>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('Color').hasError('required') && addprocedureform.get('Color').touched">
+                                Color is Required
+                              </div>
+                        <label class="label">Quantity</label>
+                        <input class="input" type="number" formControlName='Quantity' (ngModelChange)="changeinstock($event)" required>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('Quantity').hasError('required') && addprocedureform.get('Quantity').touched">
+                                Quantity is Required
+                              </div>
+                        <label class="label">Details</label>
+                        <textarea class="textarea" formControlName='Details' required></textarea>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('Details').hasError('required') && addprocedureform.get('Details').touched">
+                                Details are Required
+                              </div>
+                        <label class="label">Rating</label>
+                        <input class="input" type="number" formControlName='Rating' required>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('Rating').hasError('required') && addprocedureform.get('Rating').touched">
+                                Rating  is Required
+                              </div>
+                        <label class="label">ExpiryDate</label>
+                        <input class="input" type="text" formControlName='ExpiryDate' placeholder="YYYY-MM-DD" required>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('ExpiryDate').hasError('required') && addprocedureform.get('ExpiryDate').touched">
+                                ExpiryDate is Required
+                              </div>
+                        <label class="label">ImageUrl</label>
+                        <input class="input" type="text" formControlName='ImageUrl' required>
+                        <div class="has-text-danger" *ngIf= "addprocedureform.get('ImageUrl').hasError('required') && addprocedureform.get('ImageUrl').touched">
+                               ImageURL is Required
+                              </div>
+                
+                        <div class="field">
+                                <div class="control">
+                                        <br>
+                                    <button type="submit" class="button is-large is-fullwidth is-success">ADD</button>
+                                </div>
+                            </div>  
+            
+        </form>
+        
+    </div>
+    

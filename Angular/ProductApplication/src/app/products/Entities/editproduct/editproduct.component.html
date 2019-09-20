@@ -1,0 +1,94 @@
+<div class="notification">
+        <form [formGroup]='editprocedureform' (ngSubmit)="updateProduct()" novalidate>
+            
+            
+               
+                        <label class="label">ID</label>
+                        <input class="input" type="number" formControlName='ProductId' required disabled> 
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('ProductId').hasError('required') && editprocedureform.get('ProductId').touched">
+                                ID is Required
+                              </div>
+                        <label class="label">Name</label>
+                        <input class="input" type="text" formControlName='Title'>
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('Title').hasError('required') && editprocedureform.get('Title').touched">
+                                Name is Required
+                              </div>
+                        <label class="label">Price</label>
+                        <input class="input" type="number" formControlName='Price' required>
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('Price').hasError('required') && editprocedureform.get('Price').touched">
+                                Price is Required
+                              </div>
+                        <label class="label">Color</label>
+                        <input class="input" type="text" formControlName='Color' required>
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('Color').hasError('required') && editprocedureform.get('Color').touched">
+                                Color is Required
+                              </div>
+                        <label class="label">Quantity</label>
+                        <input class="input" type="number" formControlName='Quantity' (ngModelChange)="changeinstock($event)" required>
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('Quantity').hasError('required') && editprocedureform.get('Quantity').touched">
+                                Quantity is Required
+                              </div>
+                        <label class="label">Details</label>
+                        <textarea class="textarea" formControlName='Details'></textarea>
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('Details').hasError('Details') && editprocedureform.get('Details').touched">
+                                Details are Required
+                              </div>
+                        <label class="label">Rating</label>
+                        <input class="input" type="number" formControlName='Rating'>
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('Rating').hasError('Rating') && editprocedureform.get('Rating').touched">
+                                Rating  is Required
+                              </div>
+                        <label class="label">ExpiryDate</label>
+                        <input class="input" type="text"  [value]="editprocedureform.get('ExpiryDate').value" formControlName='ExpiryDate' placeholder="YYYY-MM-DD">
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('ExpiryDate').hasError('ExpiryDate') && editprocedureform.get('ExpiryDate').touched">
+                                ExpiryDate is Required
+                              </div>
+                        <label class="label">ImageUrl</label>
+                        <input class="input" type="text" formControlName='ImageUrl'>
+                        <div class="has-text-danger" *ngIf= "editprocedureform.get('ImageUrl').hasError('required') && editprocedureform.get('ImageUrl').touched">
+                               ImageURL is Required
+                              </div>
+                
+        
+                <div class="field">
+                        <div class="control">
+                                <br>
+                            <a  (click)='Goback()' class="button is-medium is-info">Back</a>
+                            <button type="submit" class="button is-medium is-primary">Save</button>
+                        </div>
+                    </div>  
+    
+</form>
+    <!-- <form [formGroup]='editprocedureform' novalidate>
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Color</th>
+                    <th>Quantity</th>
+                    <th>Details</th>
+                    <th>Rating</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>  <input class="input" type="number" formControlName='ProductId'>  </td>
+                    <td>  <input class="input" type="text" formControlName='Title'></td>
+                    <td>  <input class="input" type="number" formControlName='Price'></td>
+                    <td>  <input class="input" type="text" formControlName='Color'></td>
+                    <td>  <input class="input" type="number" formControlName='Quantity' (ngModelChange)="changeinstock($event)"></td>
+                    <td>  
+                        <textarea class="textarea" formControlName='Details'></textarea>
+                    </td>
+                    <td>  <input class="input" type="number" formControlName='Rating'></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="field is-grouped">
+            <div class="control">
+               
+                <a type="submit" class="button is-primary">Update</a>
+            </div>
+        </div>
+    </form> -->
+</div>
